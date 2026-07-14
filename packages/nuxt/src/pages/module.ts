@@ -247,8 +247,6 @@ export default defineNuxtModule({
       const declarationFile = resolve(nuxt.options.buildDir, 'types/typed-router.d.ts')
 
       const typedRouterOptions: TypedRouterOptions = {
-        // Keys in the generated DTS must be relative to rootDir (matching the
-        // sfc-typed-router Volar plugin), not the default process.cwd().
         root: nuxt.options.rootDir,
         routesFolder: [],
         dts: declarationFile,
