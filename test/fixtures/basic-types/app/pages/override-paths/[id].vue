@@ -5,15 +5,15 @@ definePageMeta({
 })
 
 const route = useRoute()
-true satisfies IsEqual<typeof route.name, 'overridden' | 'overridden-view' | 'overridden-absolute' | 'overridden-no-parens'>
-true satisfies IsEqual<typeof route.params, { id: string } | { id: string } | { id: string } | { id: string }>
+true satisfies IsEqual<typeof route.name, 'overridden' | 'overridden-view' | 'overridden-absolute' | 'overridden-no-parens' | 'overridden-detached'>
+true satisfies IsEqual<typeof route.params, { id: string } | { id: string } | { id: string } | { id: string } | { id: string }>
 </script>
 
 <template>
   <div>
     <template v-if="false">
-      {{ (true satisfies IsEqual<typeof $route.name, 'overridden' | 'overridden-view' | 'overridden-absolute' | 'overridden-no-parens'>) }}
-      {{ (true satisfies IsEqual<typeof $route.params, { id: string } | { id: string } | { id: string } | { id: string }>) }}
+      {{ (true satisfies IsEqual<typeof $route.name, 'overridden' | 'overridden-view' | 'overridden-absolute' | 'overridden-no-parens' | 'overridden-detached'>) }}
+      {{ (true satisfies IsEqual<typeof $route.params, { id: string } | { id: string } | { id: string } | { id: string } | { id: string }>) }}
     </template>
 
     <NuxtPage />
